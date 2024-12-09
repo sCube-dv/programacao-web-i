@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: cadetblue;
+    height: 500px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.item {
+    background-color: beige;
+    height: 100px;
+    width: 100px;
+}
+
+div {
+    text-align: center;
+}
