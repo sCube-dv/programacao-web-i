@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas e Formulários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Tabelas -->
+
+    <h2>Tabelas</h2>
+    <table>
+        <tr>
+            <th>CÓDIGO</th>
+            <th>DESCRIÇÃO</th>
+            <th>PREÇO</th>
+        </tr>
+        <tr>
+            <td>120</td>
+            <td>Mouse sem Fio</td>
+            <td>R$ 250,00</td>
+        </tr>
+        <tr>
+            <td>230</td>
+            <td>Teclado sem Fio</td>
+            <td>R$ 350,00</td>
+        </tr>
+    </table>
+    <br><br><br>
+
+    <!-- Formulários -->
+
+    <h2>Formulários</h2>
+
+    <form action="index.html" method="get">
+        <fieldset>
+            <legend>Cadastro de Pessoa</legend>
+            <label for="nome">Nome:</label>
+            <input type="text">
+
+            <label for="idade">Idade:</label>
+            <input type="number">
+
+            <label for="senha">Senha:</label>
+            <input type="password">
+
+            <label for="curso">Curso:</label>
+            <select name="curso" id="">
+                <option value="ads">Análise de Sistemas</option>
+                <option value="adm">Administração</option>
+                <option value="mat">Matemática</option>
+            </select><br><br>
+
+            <button type="submit">Salvar</button>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
