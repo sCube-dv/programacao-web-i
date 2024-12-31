@@ -18,10 +18,14 @@
     <button value="-" id="sub" onclick="pegarOperacao(value)">-</button>
     <button value="*" id="mult" onclick="pegarOperacao(value)">*</button>
     <button value="/" id="div" onclick="pegarOperacao(value)">/</button>
-
+    
     <br><br>
     <label for="res">Resultado:</label>
-    <label id="res"></label>
+    <label id="res">_</label>
+
+    <br><br>
+
+    <button value="c" onclick="pegarOperacao(value)">Limpar</button>
 
     <script>
         
@@ -47,8 +51,12 @@
                     break;
                 case '/':
                     total = parseFloat(n1) / parseFloat(n2)
-                    break;
-            
+                    break;           
+                case 'c':
+                    document.getElementById('n1').value = ''
+                    document.getElementById('n2').value = ''
+                    total = ''
+                    break;           
                 default:
                     break;
             }
