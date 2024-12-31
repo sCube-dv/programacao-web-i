@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&family=Roboto&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -12,24 +13,25 @@ body {
 
 nav.menu-lateral {
     /* width: 370px;  */
-    width: 80px; 
+    width: 80px;
     height: 100%;
     background-color: #202020;
-    padding: 40px 0 40px 1%; 
+    padding: 40px 0 40px 1%;
     box-shadow: 3px 0 0 #ff0077;
-    
+
     position: fixed;
     top: 0;
     left: 0;
 
     overflow: hidden;
-    transition: .2s;
+    transition: .5s;
 }
 
 /* nav.menu-lateral:hover {
     width: 370px;
 } */
 
+/* Comportamento do Menu Lateral quando receber a classe 'expandir' */
 nav.menu-lateral.expandir {
     width: 370px;
 }
@@ -39,7 +41,7 @@ nav.menu-lateral.expandir {
     padding-left: 3px;
 }
 
-.btn-expandir > i {
+.btn-expandir>i {
     color: #fff;
     font-size: 40px;
     cursor: pointer;
@@ -62,7 +64,7 @@ ul li.ativo {
 
 ul li.item-menu:hover {
     background-color: #ff0077;
-} 
+}
 
 ul li.item-menu a {
     text-decoration: none;
@@ -75,11 +77,18 @@ ul li.item-menu a {
 }
 
 ul li.item-menu a .txt-link {
-    margin-left: 30px;
+    margin-left: 70px;
     text-wrap: nowrap;
+    transition: .5s;
+    opacity: 0;
 }
 
-ul li.item-menu a .icon > i {
+nav.menu-lateral.expandir .txt-link {
+    margin-left: 30px;
+    opacity: 1;
+}
+
+ul li.item-menu a .icon>i {
     font-size: 30px;
     margin-left: 10px;
 }
