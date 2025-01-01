@@ -8,44 +8,19 @@
 }
 
 body {
-    height: 300vh;
+    height: 100vh;
+    display: flex;
 }
 
 nav.menu-lateral {
-    /* width: 370px;  */
-    width: 80px;
-    height: 100%;
+    width: 370px;
+    height: 100vh;
     background-color: #202020;
     padding: 40px 0 40px 1%;
     box-shadow: 3px 0 0 #ff0077;
 
-    position: fixed;
-    top: 0;
-    left: 0;
-
     overflow: hidden;
     transition: .5s;
-}
-
-/* nav.menu-lateral:hover {
-    width: 370px;
-} */
-
-/* Comportamento do Menu Lateral quando receber a classe 'expandir' */
-nav.menu-lateral.expandir {
-    width: 370px;
-}
-
-.btn-expandir {
-    width: 100%;
-    padding-left: 3px;
-}
-
-.btn-expandir>i {
-    color: #fff;
-    font-size: 40px;
-    cursor: pointer;
-    margin-left: 3px;
 }
 
 ul {
@@ -77,18 +52,70 @@ ul li.item-menu a {
 }
 
 ul li.item-menu a .txt-link {
-    margin-left: 70px;
+    margin-left: 30px;
     text-wrap: nowrap;
     transition: .5s;
-    opacity: 0;
-}
-
-nav.menu-lateral.expandir .txt-link {
-    margin-left: 30px;
-    opacity: 1;
 }
 
 ul li.item-menu a .icon>i {
     font-size: 30px;
     margin-left: 10px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+}
+
+main div.container {
+    background-color: #3db;
+    width: 800px;
+    height: 90vh;
+    margin-left: 3px;
+    border-radius: 0 10px 10px 0;
+
+    display: flex;
+    align-items: center;
+}
+
+main div.container .home {
+    width: 99%;
+    height: 98%;
+    background-color: #ff0077;
+    border-radius: 0 10px 10px 0;
+}
+main div.container .fatorial {
+    width: 99%;
+    height: 98%;
+    background-color: #ff0077;
+    border-radius: 0 10px 10px 0;
+    display: none;
+}
+main div.container .vetor {
+    width: 99%;
+    height: 98%;
+    background-color: #ff0077;
+    border-radius: 0 10px 10px 0;
+    display: none;
+}
+main div.container .pos-vetor {
+    width: 99%;
+    height: 98%;
+    background-color: #ff0077;
+    border-radius: 0 10px 10px 0;
+    display: none;
+}
+main div.container .previdencia {
+    width: 99%;
+    height: 98%;
+    background-color: #ff0077;
+    border-radius: 0 10px 10px 0;
+    display: none;
+}
+main div.container .imposto-renda {
+    width: 99%;
+    height: 98%;
+    background-color: #ff0077;
+    border-radius: 0 10px 10px 0;
+    display: none;
 }

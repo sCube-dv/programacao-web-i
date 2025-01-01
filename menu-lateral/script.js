@@ -18,12 +18,12 @@ itemMenu.forEach((item) =>
 /* Lógica para Expandir o Menu */
 
 /* Armazena o botão de expandir e o menu lateral */
-// let btnExp = document.querySelector('#btn-exp')
-// let sideMenu = document.querySelector('.menu-lateral')
+let btnExp = document.querySelector('#btn-exp')
+let sideMenu = document.querySelector('.menu-lateral')
 
 /* Adiciona evento de 'click' ao botão expandir e alterna a inserção da classe 'expandir' ao elemento 'nav' e assim é realizada a exibição/ocultação do menu */
 
 /* Obs.: Função anônima `function(){}` */
-// btnExp.addEventListener('click', function(){
-//     sideMenu.classList.toggle('expandir')
-// })
+btnExp.addEventListener('click', function(){
+    sideMenu.classList.toggle('expandir')
+})
