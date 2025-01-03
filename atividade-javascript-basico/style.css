@@ -62,6 +62,8 @@ ul li.item-menu a .icon>i {
     margin-left: 10px;
 }
 
+/* Estilização Conteúdo Principal da Página */
+
 main {
     display: flex;
     align-items: center;
@@ -83,14 +85,27 @@ main div.container .home {
     height: 98%;
     background-color: #ff0077;
     border-radius: 0 10px 10px 0;
+    display: none;
 }
 main div.container .fatorial {
     width: 99%;
     height: 98%;
     background-color: #ff0077;
     border-radius: 0 10px 10px 0;
-    display: none;
+    /* display: none; */
 }
+
+main div.container .fatorial > h3 {
+    text-align: center;
+}
+
+main div.container .fatorial > form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
 main div.container .vetor {
     width: 99%;
     height: 98%;

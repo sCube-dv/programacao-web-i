@@ -14,6 +14,31 @@ itemMenu.forEach((item) =>
     item.addEventListener('click', selectedItem)
 )
 
+/* Lógica para calcular o fatorial do número informado */
+
+let n = document.getElementById('nFat')
+
+const btnCalc = document.getElementById('calcFat')
+
+btnCalc.addEventListener('click', () => {
+    let fat = parseInt(n.value) /* converte para numero int */
+
+    /* Verifica se é um valor válido */
+    if (isNaN(fat) || fat < 0) {
+        alert("Por favor, insira um número inteiro não negativo")
+        return
+    }
+
+    let resultado = 1 /* Valor inicial (ps.: 0!=1) */
+    for (let i = fat; i > 1; i--) {
+        resultado *= i
+    }
+    
+    document.getElementById('fatRes').innerHTML = `O fatorial do número ${fat} é <strong>${resultado}</strong> `
+})
+
+const limpar = () => document.getElementById('fatRes').innerHTML = ''
+
 
 /* Lógica para Expandir o Menu */
 
