@@ -124,8 +124,9 @@ const mostraPosElem = () => {
             return document.querySelector('.posItemVet').innerHTML = `O elemento '<strong>${posElem}</strong>' ocupa a posição '<strong>${i}</strong>' no <strong>Vetor [${Vet}]</strong>`
         }
 
-        return document.querySelector('.posItemVet').innerHTML = `O elemento '<strong>${posElem}</strong>' não pertence ao <strong>Vetor [${Vet}]</strong>`
     }
+
+    return document.querySelector('.posItemVet').innerHTML = `O elemento '<strong>${posElem}</strong>' não pertence ao <strong>Vetor [${Vet}]</strong>`
         
 }
 
