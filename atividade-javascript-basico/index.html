@@ -12,13 +12,8 @@
         
     <nav class="menu-lateral">
 
-        <!-- <div class="btn-start">
-            <i class="bi bi-house"></i>
-            <i class="bi bi-list" id="btn-exp"></i>
-        </div> -->
-
         <ul>
-            <li class="item-menu ativo">
+            <li class="item-menu ativo" onclick="mostrarHome()">
                 <a href="#">
                     <span class="icon"><i class="bi bi-house"></i></span>
                     <span class="txt-link">Home</span>
@@ -63,7 +58,8 @@
             <div class="home">
                 <h3>Home</h3>
             </div>
-            <div class="fatorial">
+            <!-- Tela para Cálculo do Fatorial de um Número -->
+            <div class="fatorial ">
                 <h3>Cálculo Fatorial</h3>
 
                 <form action="index.html">
@@ -77,19 +73,60 @@
                     <button type="button" id="calcFat">Calcular Fatorial</button>
 
                     <button type="reset" onclick="limpar()">Limpar Formulário</button>
-
-                    
                 </form>
-
-                
                 
             </div>
 
+            <!-- Tela para calcular a multiplicação entre dois vetores -->
             <div class="vetor">
                 <h3>Multiplicação de Vetores</h3>
+
+                <p>Informe abaixo os valores dos dois vetores a serem multiplicados</p>
+
+                <form action="">
+                    <label for="nElemVet">Quantos elementos terão os vetores:</label>
+                    <input type="number" name="nElemVet" id="nElemVet">
+
+                    <button type="button" id="preencherVetor">Preencher Vetores</button>
+                    <button type="reset" onclick="limparVet()">Limpar Formulário</button>
+
+                    <div>
+                        <p class="vetA"></p>
+                    </div>
+                    <div>
+                        <p class="vetB"></p>
+                    </div>
+                    <div>
+                        <p class="vetRes"></p>
+                    </div>
+                </form>
+
             </div>
             <div class="pos-vetor">
                 <h3>Posição no Vetor</h3>
+
+                <p>Vamos preencher o vetor...</p>
+
+                <form action="">
+                    <label for="qtdElemVet">Quantos elementos terá o vetor: </label>
+                    <input type="number" name="qtdElemVet" id="qtdElemVet">
+
+                    <button type="button" onclick="povoarVetor()">Preencher Vetor</button>
+
+                    <div>
+                        <p class="exibVet"></p>
+                    </div>
+
+                    <label for="elemPos">De qual elemento o Vetor deseja saber a posição?</label>
+                    <input type="number" name="elemPos" id="elemPos">
+
+                    <button type="button" onclick="mostraPosElem()">Buscar Posição</button>
+                
+                    <div>
+                        <p class="posItemVet"></p>
+                    </div>
+                </form>
+
             </div>
             <div class="previdencia">
                 <h3>Alíquota Previdência</h3>

@@ -80,19 +80,30 @@ main div.container {
     align-items: center;
 }
 
+/* Exibir ou Ocultar Conteúdo Principal do Menu Selecionado */
+/* main div.container div.exibir {
+    display: block;
+}
+
+.ocultar {
+    display: none;
+} */
+
 main div.container .home {
     width: 99%;
     height: 98%;
     background-color: #ff0077;
     border-radius: 0 10px 10px 0;
     display: none;
+    
 }
+
 main div.container .fatorial {
     width: 99%;
     height: 98%;
     background-color: #ff0077;
     border-radius: 0 10px 10px 0;
-    /* display: none; */
+    display: none;
 }
 
 main div.container .fatorial > h3 {
@@ -113,13 +124,22 @@ main div.container .vetor {
     border-radius: 0 10px 10px 0;
     display: none;
 }
+
+main div.container .vetor > form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
 main div.container .pos-vetor {
     width: 99%;
     height: 98%;
     background-color: #ff0077;
     border-radius: 0 10px 10px 0;
-    display: none;
+    /* display: none; */
 }
+
 main div.container .previdencia {
     width: 99%;
     height: 98%;
@@ -127,6 +147,7 @@ main div.container .previdencia {
     border-radius: 0 10px 10px 0;
     display: none;
 }
+
 main div.container .imposto-renda {
     width: 99%;
     height: 98%;
