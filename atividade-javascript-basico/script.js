@@ -131,6 +131,39 @@ const mostraPosElem = () => {
 }
 
 
+/* Lógica para Calcular o Salário Líquido de uma pessoa de acordo com a Alíquota Previdenciária */
+
+const salario = document.getElementById('salario')
+
+const calcSalLiq = () => {
+    let sal = parseFloat(salario.value)
+    // alert(sal)
+
+    if (sal <= 1412) {
+        document.querySelector('.aliqPrev').innerHTML = `Sua Alíquota do INSS é de <strong>7,5%</strong> que representa um desconto de <strong>R$ ${(sal*0.075).toFixed(2)}</strong>`
+
+        document.querySelector('.salLiq').innerHTML = `Seu Salário Líquido é <strong> R$ ${(sal-(sal*0.075)).toFixed(2)} </strong>`
+    } else if ((sal > 1412) && (sal <= 2666.68)) {
+        document.querySelector('.aliqPrev').innerHTML = `Sua Alíquota do INSS é de <strong>9%</strong> que representa um desconto de <strong>R$ ${(sal*0.09-21.18).toFixed(2)}</strong>`
+
+        document.querySelector('.salLiq').innerHTML = `Seu Salário Líquido é <strong> R$ ${(sal-(sal*0.09-21.18)).toFixed(2)} </strong>`
+    } else if ((sal > 2666.68) && (sal <= 4000.03)) {
+        document.querySelector('.aliqPrev').innerHTML = `Sua Alíquota do INSS é de <strong>12%</strong> que representa um desconto de <strong>R$ ${(sal*0.12-101.18).toFixed(2)}</strong>`
+
+        document.querySelector('.salLiq').innerHTML = `Seu Salário Líquido é <strong> R$ ${(sal-(sal*0.12-101.18)).toFixed(2)} </strong>`
+    } else if ((sal > 4000.03) && (sal <= 7786.02)) {
+        document.querySelector('.aliqPrev').innerHTML = `Sua Alíquota do INSS é de <strong>14%</strong> que representa um desconto de <strong>R$ ${(sal*0.14-181.18).toFixed(2)}</strong>`
+
+        document.querySelector('.salLiq').innerHTML = `Seu Salário Líquido é <strong> R$ ${(sal-(sal*0.14-181.18)).toFixed(2)} </strong>`
+    } else {
+        document.querySelector('.aliqPrev').innerHTML = `Sua Alíquota do INSS é referente ao teto do INSS, o que representa um desconto de <strong>R$ 908.86</strong>`
+
+        document.querySelector('.salLiq').innerHTML = `Seu Salário Líquido é <strong> R$ ${(sal-908.86).toFixed(2)} </strong>`
+    }
+
+    
+}
+
 
 /* Lógica para Expandir o Menu */
 

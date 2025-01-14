@@ -130,6 +130,24 @@
             </div>
             <div class="previdencia">
                 <h3>Alíquota Previdência</h3>
+                <p>Saiba qual a sua alíquota de previdência e o seu salário líquido.</p>
+
+                <p>Para isso, informe qual o valor do seu salário no campo abaixo.</p>
+
+                <form action="">
+                    <label for="salario">Qual é o seu salário:</label>
+                    <input type="number" name="salario" id="salario" required>
+
+                    <button type="button" onclick="calcSalLiq()">Calcular Salário Líquido</button>
+                    <button type="reset">Limpar</button>
+                </form>
+                <div>
+                    <p class="aliqPrev"></p>
+                </div>
+                <div>
+                    <p class="salLiq"></p>
+                </div>
+
             </div>
             <div class="imposto-renda">
                 <h3>Imposto de Renda</h3>

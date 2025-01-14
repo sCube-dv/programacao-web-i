@@ -137,7 +137,7 @@ main div.container .pos-vetor {
     height: 98%;
     background-color: #ff0077;
     border-radius: 0 10px 10px 0;
-    /* display: none; */
+    display: none;
 }
 
 main div.container .previdencia {
@@ -145,7 +145,7 @@ main div.container .previdencia {
     height: 98%;
     background-color: #ff0077;
     border-radius: 0 10px 10px 0;
-    display: none;
+    /* display: none; */
 }
 
 main div.container .imposto-renda {
