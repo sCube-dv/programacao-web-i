@@ -94,8 +94,13 @@ main div.container .home {
     height: 98%;
     background-color: #ff0077;
     border-radius: 0 10px 10px 0;
-    
-    
+}
+
+main div.container div.home > div.homeConteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 main div.container .fatorial {
