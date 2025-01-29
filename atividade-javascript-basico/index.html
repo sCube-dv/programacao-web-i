@@ -19,31 +19,31 @@
                     <span class="txt-link">Home</span>
                 </a>
             </li>
-            <li class="item-menu">
+            <li class="item-menu" onclick="mostrarFat()">
                 <a href="#">
                     <span class="icon"><i class="bi bi-exclamation-diamond"></i></span>
                     <span class="txt-link">Calcular Fatorial</span>
                 </a>
             </li>
-            <li class="item-menu">
+            <li class="item-menu" onclick="mostrarMultVet()">
                 <a href="#">
                     <span class="icon"><i class="bi bi-arrow-up-right"></i></span>
                     <span class="txt-link">Multiplicação de Vetores</span>
                 </a>
             </li>
-            <li class="item-menu">
+            <li class="item-menu" onclick="mostrarPosVet()">
                 <a href="#">
                     <span class="icon"><i class="bi bi-crosshair"></i></span>
                     <span class="txt-link">Localiza Posição no Vetor</span>
                 </a>
             </li>
-            <li class="item-menu">
+            <li class="item-menu" onclick="mostrarPrevidencia()">
                 <a href="#">
                     <span class="icon"><i class="bi bi-cash-stack"></i></span>
                     <span class="txt-link">Alíquota Previdência</span>
                 </a>
             </li>
-            <li class="item-menu">
+            <li class="item-menu" onclick="mostrarIR()">
                 <a href="#">
                     <span class="icon"><i class="bi bi-bank"></i></span>
                     <span class="txt-link">Cálculo Imposto de Renda</span>
@@ -59,7 +59,7 @@
                 <h3>Home</h3>
             </div>
             <!-- Tela para Cálculo do Fatorial de um Número -->
-            <div class="fatorial ">
+            <div class="fatorial ocultar">
                 <h3>Cálculo Fatorial</h3>
 
                 <form action="index.html">
@@ -78,7 +78,7 @@
             </div>
 
             <!-- Tela para calcular a multiplicação entre dois vetores -->
-            <div class="vetor">
+            <div class="vetor ocultar">
                 <h3>Multiplicação de Vetores</h3>
 
                 <p>Informe abaixo os valores dos dois vetores a serem multiplicados</p>
@@ -102,7 +102,7 @@
                 </form>
 
             </div>
-            <div class="pos-vetor">
+            <div class="pos-vetor ocultar">
                 <h3>Posição no Vetor</h3>
 
                 <p>Vamos preencher o vetor...</p>
@@ -128,9 +128,11 @@
                 </form>
 
             </div>
-            <div class="previdencia">
+            <div class="previdencia ocultar">
                 <h3>Alíquota Previdência</h3>
                 <p>Saiba qual a sua alíquota de previdência e o seu salário líquido.</p>
+
+                <img src="./img/aliq_inss" alt="tabela inss" style="width: 80%; border-radius: 5px;">
 
                 <p>Para isso, informe qual o valor do seu salário no campo abaixo.</p>
 
@@ -149,8 +151,28 @@
                 </div>
 
             </div>
-            <div class="imposto-renda">
+            <div class="imposto-renda ocultar">
                 <h3>Imposto de Renda</h3>
+
+                <p>Saiba qual o valor o imposto de renda retido da fonte.</p>
+
+                <img src="./img/irpf_tabela" alt="tabela irpf" style="width: 80%; border-radius: 5px;">
+
+                <p>Para isso, informe qual o valor do seu salário no campo abaixo.</p>
+
+                <form action="">
+                    <label for="salarioIR">Qual é o seu salário:</label>
+                    <input type="number" name="salarioIR" id="salarioIR" required>
+
+                    <button type="button" onclick="calcSalIR()">Calcular Salário IR</button>
+                    <button type="reset">Limpar</button>
+                </form>
+                <div>
+                    <p class="descIRPF"></p>
+                </div>
+                <div>
+                    <p class="salLiqIR"></p>
+                </div>
             </div>
 
         </div>

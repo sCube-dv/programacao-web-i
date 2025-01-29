@@ -17,18 +17,62 @@ itemMenu.forEach((item) =>
 
 /* Lógica para exibir e ocultar as telas principais */
 /* funções para mostrar as telas de acordo com a opção de menu selecionada */
+
+let homePg = document.querySelector('.home')
+let fatorialPg = document.querySelector('.fatorial')
+let vetorPg = document.querySelector('.vetor')
+let posVetorPg = document.querySelector('.pos-vetor')
+let previdenciaPg = document.querySelector('.previdencia')
+let impostoRendaPg = document.querySelector('.imposto-renda')
+
+
 const mostrarHome = () => {
-
-    // alert('home')
-    let home = document.getElementsByClassName('home')
-
-    if(home.style.display === 'none'){
-        // home.style.display = 'block'
-        alert('home')
-    } else {
-        home.style.display = 'none'
-    }
-    
+    homePg.classList.remove('ocultar')
+    fatorialPg.classList.add('ocultar')
+    vetorPg.classList.add('ocultar')
+    posVetorPg.classList.add('ocultar')
+    previdenciaPg.classList.add('ocultar')
+    impostoRendaPg.classList.add('ocultar')
+}
+const mostrarFat = () => {
+    homePg.classList.add('ocultar')
+    fatorialPg.classList.remove('ocultar')
+    vetorPg.classList.add('ocultar')
+    posVetorPg.classList.add('ocultar')
+    previdenciaPg.classList.add('ocultar')
+    impostoRendaPg.classList.add('ocultar')
+}
+const mostrarMultVet = () => {
+    homePg.classList.add('ocultar')
+    fatorialPg.classList.add('ocultar')
+    vetorPg.classList.remove('ocultar')
+    posVetorPg.classList.add('ocultar')
+    previdenciaPg.classList.add('ocultar')
+    impostoRendaPg.classList.add('ocultar')
+}
+const mostrarPosVet = () => {
+    homePg.classList.add('ocultar')
+    fatorialPg.classList.add('ocultar')
+    vetorPg.classList.add('ocultar')
+    posVetorPg.classList.remove('ocultar')
+    previdenciaPg.classList.add('ocultar')
+    impostoRendaPg.classList.add('ocultar')
+}
+const mostrarPrevidencia = () => {
+    homePg.classList.add('ocultar')
+    fatorialPg.classList.add('ocultar')
+    vetorPg.classList.add('ocultar')
+    posVetorPg.classList.add('ocultar')
+    previdenciaPg.classList.remove('ocultar')
+    impostoRendaPg.classList.add('ocultar')
+}
+const mostrarIR = () => {
+    homePg.classList.add('ocultar')
+    fatorialPg.classList.add('ocultar')
+    vetorPg.classList.add('ocultar')
+    posVetorPg.classList.add('ocultar')
+    previdenciaPg.classList.add('ocultar')
+    impostoRendaPg.classList.remove('ocultar')
 }
 
 
@@ -85,7 +129,7 @@ preencherVetor.addEventListener('click', () => {
     } 
 
     document.querySelector('.vetA').innerText = `Vetor A: [${vetA}]`
-    document.querySelector('.vetB').innerText = `Vetor A: [${vetB}]`
+    document.querySelector('.vetB').innerText = `Vetor B: [${vetB}]`
     document.querySelector('.vetRes').innerText = `Vetor A*B: [${vetRes}]`
 })
 
@@ -164,16 +208,34 @@ const calcSalLiq = () => {
     
 }
 
+/* Lógica para Calcular o Salário Líquido de uma pessoa de acordo com o Desconto do IRPF */
 
-/* Lógica para Expandir o Menu */
+const salarioIR = document.getElementById('salarioIR')
 
-/* Armazena o botão de expandir e o menu lateral */
-// let btnExp = document.querySelector('#btn-exp')
-// let sideMenu = document.querySelector('.menu-lateral')
+const calcSalIR = () => {
+    let salIR = parseFloat(salarioIR.value)
 
-/* Adiciona evento de 'click' ao botão expandir e alterna a inserção da classe 'expandir' ao elemento 'nav' e assim é realizada a exibição/ocultação do menu */
+    if (salIR <= 2259.20) {
+        document.querySelector('.descIRPF').innerHTML = `Isento`
 
-/* Obs.: Função anônima `function(){}` */
-// btnExp.addEventListener('click', function(){
-//     sideMenu.classList.toggle('expandir')
-// })
+        document.querySelector('.salLiqIR').innerHTML = `Seu Salário Líquido é <strong> R$ ${(salIR).toFixed(2)} </strong>`
+    } else if ((salIR > 2259.20) && (salIR <= 2826.65)) {
+        document.querySelector('.descIRPF').innerHTML = `Desconto Imposto de Renda de <strong>7,5%</strong> que representa um desconto de <strong>R$ ${(salIR*0.075-169.44).toFixed(2)}</strong>`
+
+        document.querySelector('.salLiqIR').innerHTML = `Seu Salário Líquido é <strong> R$ ${(salIR-(salIR*0.075-169.44)).toFixed(2)} </strong>`
+    } else if ((salIR > 2826.65) && (salIR <= 3751.05)) {
+        document.querySelector('.descIRPF').innerHTML = `Desconto Imposto de Renda de <strong>15%</strong> que representa um desconto de <strong>R$ ${(salIR*0.15-381.44).toFixed(2)}</strong>`
+
+        document.querySelector('.salLiqIR').innerHTML = `Seu Salário Líquido é <strong> R$ ${(salIR-(salIR*0.15-381.44)).toFixed(2)} </strong>`
+    } else if ((salIR > 3751.05) && (salIR <= 4664.68)) {
+        document.querySelector('.descIRPF').innerHTML = `Desconto Imposto de Renda de <strong>22.5%</strong> que representa um desconto de <strong>R$ ${(salIR*0.225-662.77).toFixed(2)}</strong>`
+
+        document.querySelector('.salLiqIR').innerHTML = `Seu Salário Líquido é <strong> R$ ${(salIR-(salIR*0.225-662.77)).toFixed(2)} </strong>`
+    } else {
+        document.querySelector('.descIRPF').innerHTML = `Desconto Imposto de Renda de <strong>27.5%</strong> que representa um desconto de <strong>R$ ${(salIR*0.275-896).toFixed(2)}</strong>`
+
+        document.querySelector('.salLiqIR').innerHTML = `Seu Salário Líquido é <strong> R$ ${(salIR-(salIR*0.275-896)).toFixed(2)} </strong>`
+    }
+
+    
+}

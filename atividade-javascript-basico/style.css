@@ -83,18 +83,18 @@ main div.container {
 /* Exibir ou Ocultar Conteúdo Principal do Menu Selecionado */
 /* main div.container div.exibir {
     display: block;
-}
+}*/
 
 .ocultar {
     display: none;
-} */
+}     
 
 main div.container .home {
     width: 99%;
     height: 98%;
     background-color: #ff0077;
     border-radius: 0 10px 10px 0;
-    display: none;
+    
     
 }
 
@@ -103,7 +103,6 @@ main div.container .fatorial {
     height: 98%;
     background-color: #ff0077;
     border-radius: 0 10px 10px 0;
-    display: none;
 }
 
 main div.container .fatorial > h3 {
@@ -122,7 +121,6 @@ main div.container .vetor {
     height: 98%;
     background-color: #ff0077;
     border-radius: 0 10px 10px 0;
-    display: none;
 }
 
 main div.container .vetor > form{
@@ -137,7 +135,6 @@ main div.container .pos-vetor {
     height: 98%;
     background-color: #ff0077;
     border-radius: 0 10px 10px 0;
-    display: none;
 }
 
 main div.container .previdencia {
@@ -145,7 +142,6 @@ main div.container .previdencia {
     height: 98%;
     background-color: #ff0077;
     border-radius: 0 10px 10px 0;
-    /* display: none; */
 }
 
 main div.container .imposto-renda {
@@ -153,5 +149,4 @@ main div.container .imposto-renda {
     height: 98%;
     background-color: #ff0077;
     border-radius: 0 10px 10px 0;
-    display: none;
 }
