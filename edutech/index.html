@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTech</title>
+
+    <!-- import bootstrap css file  -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-success">
+
+        <div class="container-fluid"> <!-- 'container-fluid' sempre ocupa 100% da largura da página -->
+
+            <a href="index.html" class="navbar-brand text-white">EduTech Academy</a>
+
+            <!-- botão a ser exibido para mostrar o menu qdo a largura da tela for mininuída -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> <!-- exibe o ícone de menu [botão hambúrger] -->
+            </button>
+
+            <!-- 
+                navbar-toggler: classe do botão menu
+                data-bs-toggle="collapse" :função do botão é abrir e retrair alguma coisa
+                data-bs-target="#navbarNav" :alvo do elemento (cujo id é 'navbarNav') que o botão abrirá e retrairá
+            -->
+
+            <div class="colappse navbar-collapse justify-content-end" id="navbarNav">
+                <!-- div para abarcar os itens de menu collapse -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link text-white">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="equipe.html" class="nav-link text-white">
+                            Equipe
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="cursos.html" class="nav-link text-white">
+                            Cursos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="contato.html" class="nav-link text-white">
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="container"> <!-- classe 'container' funciona de forma responsiva -->
+        <h1 class="text-primary text-center mt-4">EduTech Academy</h1>
+
+        <img src="./img/banner.png" alt="EduTech Banner" class="w-50 mx-auto d-block my-5">
+
+        <h3 class="text-center">EduTech Academy – Transformando a Educação com Tecnologia</h3>
+
+        <p class="text-center">
+            A <strong>EduTech Academy</strong> é uma empresa inovadora dedicada a revolucionar a
+            educação por meio da tecnologia. Nossa missão é capacitar estudantes, professores e profissionais com
+            soluções educacionais modernas, acessíveis e eficazes, impulsionando o aprendizado no mundo digital.
+        </p>
+
+        <p class="text-center">
+            Com uma abordagem que combina metodologias ativas, ensino personalizado e ferramentas tecnológicas
+            avançadas, oferecemos cursos, treinamentos e plataformas interativas para diversas áreas do conhecimento.
+            Nosso foco está na aprendizagem prática e na formação de habilidades essenciais para o mercado de trabalho
+            do futuro.
+        </p>
+
+    </div>
+
+
+
+    <!-- import bootstrap js file  -->
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

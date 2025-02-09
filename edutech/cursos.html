@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTech | Cursos</title>
+
+    <!-- import bootstrap css file  -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-success">
+
+        <div class="container-fluid"> <!-- 'container-fluid' sempre ocupa 100% da largura da página -->
+
+            <a href="index.html" class="navbar-brand text-white">EduTech Academy</a>
+
+            <!-- botão a ser exibido para mostrar o menu qdo a largura da tela for mininuída -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> <!-- exibe o ícone de menu [botão hambúrger] -->
+            </button>
+
+            <!-- 
+                navbar-toggler: classe do botão menu
+                data-bs-toggle="collapse" :função do botão é abrir e retrair alguma coisa
+                data-bs-target="#navbarNav" :alvo do elemento (cujo id é 'navbarNav') que o botão abrirá e retrairá
+            -->
+
+            <div class="colappse navbar-collapse justify-content-end" id="navbarNav">
+                <!-- div para abarcar os itens de menu collapse -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link text-white">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="equipe.html" class="nav-link text-white">
+                            Equipe
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="cursos.html" class="nav-link text-white">
+                            Cursos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="contato.html" class="nav-link text-white">
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav> <!-- fim navbar -->
+
+    <h1 class="text-center text-primary mb-3">Nossos Cursos</h1>
+
+    <div class="container"> <!-- classe 'container' funciona de forma responsiva -->
+        
+        <!-- grid-layout > row col > 'sm' small breakpoint -->
+        <div class="row shadow p-3 mb-5 rounded">
+            <div class="col-sm-3 ">
+                <img src="./img/cienciadados.png" alt="Ciência de Dados" class="w-100">
+            </div>
+
+            <div class="col-sm-9">
+                <h2>Introdução à Ciência de Dados</h2>
+                <p>
+                    O curso de Ciência de Dados prepara profissionais para extrair conhecimento e insights a partir de grandes volumes de dados, combinando estatística, aprendizado de máquina e computação. Com uma abordagem prática e tecnológica, os alunos aprendem a manipular, visualizar e modelar dados para resolver problemas complexos em diversas áreas, como negócios, saúde, finanças e tecnologia. O curso capacita para o uso de ferramentas avançadas, programação em Python e R, além de técnicas de inteligência artificial e big data, formando especialistas prontos para atuar no mercado digital e orientado por dados.
+                </p>
+
+                <h5><strong>Vagas: </strong> 30</h5>
+                <h5><strong>Certificado: Sim</strong></h5>
+                <h5><strong>Carga Horária: </strong> 180 horas</h5>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Inscreva-se
+            </button>
+
+            </div>
+        </div>
+
+        <div class="row shadow p-3 mb-5 rounded">
+            <div class="col-sm-3">
+                <img src="./img/poo.png" class="w-100">
+            </div>
+            <div class="col-sm-9">
+              <h2>Programação Orientada à Objetos</h2>
+              <p>O curso de Programação Orientada a Objetos (POO) ensina os fundamentos desse paradigma essencial no desenvolvimento de software moderno. Os alunos aprenderão a estruturar e organizar código de forma eficiente, utilizando conceitos como classes, objetos, herança, encapsulamento e polimorfismo. Com uma abordagem prática e aplicada, o curso explora linguagens como Java, Python e C++, capacitando os estudantes a desenvolver sistemas escaláveis, reutilizáveis e bem estruturados. Além disso, serão abordados princípios de design, boas práticas e padrões de desenvolvimento para criar soluções robustas para o mercado de tecnologia. Ao final do curso, os participantes estarão aptos a aplicar POO em diversos contextos, desde aplicações desktop e web até inteligência artificial e jogos.            </p>
+              <h5><strong>Vagas: </strong> 30</h5>
+              <h5><strong>Certificado: Sim</strong></h5>
+              <h5><strong>Carga Horária: </strong> 120 horas</h5>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Inscreva-se
+              </button>
+            </div>
+          </div>
+
+          <div class="row shadow p-3 mb-5 rounded">
+            <div class="col-sm-3">
+                <img src="./img/arduino.png" class="w-100">
+            </div>
+            <div class="col-sm-9">
+              <h2>Arduíno Básico</h2>
+              <p>O curso de Arduino capacita os alunos a desenvolver projetos eletrônicos e de automação utilizando a plataforma de hardware livre mais popular do mundo. Com uma abordagem prática, o curso ensina desde os conceitos básicos de eletrônica até a programação de microcontroladores em C/C++, explorando o uso de sensores, atuadores, módulos e comunicação serial. Os participantes aprenderão a criar circuitos inteligentes, integrar componentes e desenvolver projetos para áreas como automação residencial, robótica e Internet das Coisas (IoT). Ao final do curso, os alunos estarão aptos a construir soluções inovadoras, aplicando criatividade e tecnologia na prototipagem de dispositivos interativos.</p>
+              <h5><strong>Vagas: </strong> 30</h5>
+              <h5><strong>Certificado: Sim</strong></h5>
+              <h5><strong>Carga Horária: </strong> 60 horas</h5>
+              
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Inscreva-se
+              </button>
+              
+            </div>
+          </div>
+
+    </div> <!-- fim container -->
+
+    <!-- Modal a ser executado ao clicar no botão 'Inscreva-se' -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        
+        <div class="modal-dialog">
+          
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Matrícula Online</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form>        
+                        <label>NOME</label>
+                        <input type="text" required class="form-control">
+
+                        <label>CPF</label>
+                        <input type="text" required class="form-control w-50">
+
+                        <label>E-MAIL</label>
+                        <input type="text" required class="form-control">
+                    </form>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                    <button type="button" class="btn btn-success">Salvar</button>
+                </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    <!-- import bootstrap js file  -->
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
